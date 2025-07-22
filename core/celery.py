@@ -10,7 +10,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 # Создаем экземпляр Celery
 app = Celery('core')
 
-
 app.conf.beat_schedule = {
     'fetch_feedbacks-every-minute': {
         'task': 'aiogram_bot.tasks.fetch_feedbacks',
